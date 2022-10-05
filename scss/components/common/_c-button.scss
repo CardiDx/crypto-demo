@@ -1,0 +1,40 @@
+.button {
+  display: inline-block;
+  background-color: $color-primary-500;
+  padding: 1.4rem 3.2rem 1.6rem 3.2rem;
+
+  color: $color-white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: $type-family;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  font-feature-settings: "salt" on, "liga" off;
+
+  box-shadow: 0px 20px 60px rgba(0, 119, 255, 0.2),
+    inset 0px 10px 23px rgba(36, 80, 130, 0.4);
+  border-radius: 0.8rem;
+  border: 1px solid rgba(#fff, 0.18);
+  position: relative;
+  cursor: pointer;
+  transition: background-color, box-shadow $motion-m ease-in-out;
+
+  @include bp-sm {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $color-primary-700;
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:active,
+  &:visited {
+    color: $color-white;
+  }
+}

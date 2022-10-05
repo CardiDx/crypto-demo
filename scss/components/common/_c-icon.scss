@@ -1,0 +1,35 @@
+.icon {
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: $color-white;
+  mask: no-repeat center center;
+  -webkit-mask: no-repeat center center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  transition: background-color $motion-m ease-in-out;
+
+  &:hover {
+    color: $color-white;
+  }
+  // variants
+
+  &--facebook {
+    mask-image: url(/img/icons/fb.svg);
+    -webkit-mask-image: url(/img/icons/fb.svg);
+  }
+
+  &--linkedin {
+    mask-image: url(/img/icons/linkedin.svg);
+    -webkit-mask-image: url(/img/icons/linkedin.svg);
+  }
+
+  &--twitter {
+    mask-image: url(/img/icons/twitter.svg);
+    -webkit-mask-image: url(/img/icons/twitter.svg);
+  }
+}
+
+.icon--rotate {
+  transform: rotate(180deg);
+}

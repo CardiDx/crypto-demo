@@ -1,0 +1,220 @@
+.home {
+  padding-top: 15rem;
+  padding-bottom: 9rem;
+
+  @include bp-md {
+    padding-top: 10.4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.home__inner {
+  @include section-inner;
+}
+
+.home__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home__heading {
+  text-align: center;
+  max-width: 96.5rem;
+  margin-bottom: $indent-xxxl;
+
+  @include bp-md {
+    margin-bottom: 4rem;
+  }
+}
+
+@keyframes titleflip {
+  0%,
+  20% {
+    transform: translate(0px, -360px);
+  }
+  20%,
+  40% {
+    transform: translate(0px, -270px);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate(0px, -180px);
+  }
+  60%,
+  80% {
+    transform: translate(0px, -90px);
+  }
+  80%,
+  100% {
+    transform: translate(0px, 0);
+  }
+  100%,
+  0% {
+    transform: translate(0px, -360px);
+  }
+}
+
+/*
+анимация высчитывается исходя из высоты элемента <li class="h-type-accent">USD Coin</li>
+ 0%, 20% - начальная точка. Почему 128px? 5 элементов по высоте 32px (1 отнимаем так как оно зацикленное)
+*/
+
+@keyframes titleflipMobile {
+  0%,
+  20% {
+    transform: translate(0px, -128px);
+  }
+  20%,
+  40% {
+    transform: translate(0px, -96px);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate(0px, -64px);
+  }
+  60%,
+  80% {
+    transform: translate(0px, -32px);
+  }
+  80%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+  100%,
+  0% {
+    transform: translate(0px, -128px);
+  }
+}
+
+.home__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9rem;
+  line-height: 120%;
+  color: $color-white;
+  margin-bottom: $indent-m;
+
+  @include bp-md {
+    font-size: 3.2rem;
+  }
+}
+
+.home__title-top {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home__title--animate {
+  animation: titleflip 6s ease-in-out infinite;
+  max-height: 108px;
+
+  @include bp-md {
+    animation: titleflipMobile 6s ease-in-out infinite;
+    max-height: 3.2rem;
+  }
+}
+
+.home__title--animate,
+.home__title--animate li {
+  height: 13.5rem;
+
+  @include bp-md {
+    height: 3.2rem;
+  }
+}
+
+.home__title--animate li {
+  position: relative;
+  height: 1em !important;
+}
+
+.home__description {
+  max-width: 85rem;
+  font-family: $type-family--alt;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 150%;
+  color: $color-primary-200;
+
+  @include bp-md {
+    font-size: 1.4rem;
+  }
+}
+
+.home__image {
+  box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.18);
+  border-radius: 1.6rem;
+  border: 1px solid $color-divider;
+  overflow: hidden;
+}
+
+.home__src {
+  width: 100%;
+  max-width: 70.4rem;
+}
+
+.home__monet {
+  position: absolute;
+}
+
+.home__bitcoin {
+  width: 326px;
+  height: 326px;
+  top: 200px;
+  left: -32px;
+
+  @include bp-xl {
+    width: 280px;
+    height: 280px;
+    left: -200px;
+  }
+
+  @include bp-md {
+    top: 25rem;
+    left: -4rem;
+    width: 10.7rem;
+    height: 10.7rem;
+  }
+}
+
+.home__litecoin {
+  width: 213px;
+  height: 218px;
+  right: 32px;
+  top: 70px;
+  transform: rotate(-9deg);
+
+  @include bp-xl {
+    top: 30px;
+    right: -150px;
+  }
+
+  @include bp-md {
+    width: 8rem;
+    height: 8rem;
+    top: 16rem;
+    right: -3rem;
+  }
+}
+
+.home__ethereum {
+  width: 260px;
+  height: 260px;
+  right: 187px;
+  bottom: 40px;
+
+  @include bp-xl {
+    right: -100px;
+  }
+
+  @include bp-md {
+    width: 10rem;
+    height: 10rem;
+    bottom: -5rem;
+    right: -3rem;
+  }
+}

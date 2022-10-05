@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  // overflow-x: hidden;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $type-family;
+  color: $color-white;
+  background-color: $color-backgorund;
+  font-size: 1.6rem;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+strong {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+.section {
+  padding: 108px 0;
+
+  @include bp-md {
+    padding: 4rem 0;
+  }
+}
